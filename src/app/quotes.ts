@@ -1,3 +1,4 @@
 export class Quotes {
-    constructor(public quote:string, public name:string, public author:string){}
+    showAuthor:boolean;
+    constructor(public quote:string, public name:string, public author:string, public completeDate:Date){this.showAuthor=false;}
 }

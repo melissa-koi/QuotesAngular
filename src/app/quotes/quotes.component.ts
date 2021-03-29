@@ -9,19 +9,19 @@ export class QuotesComponent implements OnInit {
 
   quote:Quotes[] = [
     new Quotes('quoted', 'named' ,'authored')
-];
+  ];
 
-// toggleDetails(index) {
-//   this.quote[index].showDescription = !this.quote[index].showDescription;
-// }
+  toggleDetails(index) {
+    this.quote[index].showAuthor = !this.quote[index].showAuthor;
+  }
 
   addNewQuote(quotes) {
     this.quote.push(quotes);
   }
 
-  deleteGoal(isComplete, index) {
+  deleteQuote(isComplete, index) {
     if(isComplete) {
-      let toDelete= confirm(`Are you sure you want to delete ${this.quote[index].quote}?`)
+      let toDelete= confirm(`Are you sure you want to delete this quote?`)
 
       if(toDelete) {
         this.quote.splice(index,1);
