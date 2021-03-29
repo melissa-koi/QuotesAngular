@@ -8,7 +8,7 @@ import { Quotes } from '../quotes'
 export class QuotesComponent implements OnInit {
 
   quote:Quotes[] = [
-    new Quotes('quoted', 'named' ,'authored',new Date())
+    new Quotes('quoted', 'named' ,'authored',new Date(2021,3,14))
   ];
 
   toggleDetails(index) {
