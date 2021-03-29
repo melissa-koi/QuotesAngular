@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Quote Ranker</h1>
+    <hr>
+  
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor = 'let quotes of quote'>
+                <p>{{quotes.name}}</p>
+            </div>
+            
+        </div>
+      <div class="col-md-6">
+        <app-quotes-form></app-quotes-form>
+      </div>
+    </div>
+  </div>
