@@ -8,11 +8,14 @@ import { Quotes } from '../quotes'
 export class QuotesComponent implements OnInit {
 
   quote:Quotes[] = [
-   {quote:"this",name:"name",author:"author"}
+    new Quotes('quoted', 'named' ,'authored')
 ];
 
+// toggleDetails(index) {
+//   this.quote[index].showDescription = !this.quote[index].showDescription;
+// }
 
-  addNewGoal(quotes) {
+  addNewQuote(quotes) {
     this.quote.push(quotes);
   }
   constructor() { }

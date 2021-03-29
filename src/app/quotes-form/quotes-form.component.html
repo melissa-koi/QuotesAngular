@@ -1,9 +1,21 @@
 <div class="container">
-    <h1>QUOTE FORM</h1>
-    <form>
-        <input type="text" placeholder="Quote" name="quote" id="quote" class="form-control"><br>
-        <input type="text" placeholder="By" name="author" id="author" class="form-control">
-        <input type="text" placeholder="Name" name="name" id="name"class="form-control">
+    <h1 class="text-center">QUOTE FORM</h1>
+    <form (ngSubmit) = 'submitQuote()' #quoteForm='ngForm'>
+        <input type="text" placeholder="Quote" name="quote" id="quote" class="form-control" [(ngModel)]="newQuote.quote" #quote='ngModel' required><br>
+        <div [hidden] = "quote.valid || quote.pristine" class="alert alert-danger">
+            <p>Quote is required</p>
+        </div>
+
+        <input type="text" placeholder="By" name="author" id="author" class="form-control" [(ngModel)]="newQuote.author" #author='ngModel' required>
+        <div [hidden] = "quote.valid || quote.pristine" class="alert alert-danger">
+            <p>Author is required</p>
+        </div>
+
+        <input type="text" placeholder="Name" name="name" id="name"class="form-control" [(ngModel)]="newQuote.name" #name='ngModel' required>
+        <div [hidden] = "quote.valid || quote.pristine" class="alert alert-danger">
+            <p>Name is required</p>
+        </div>
+
         <button type="submit" class="btn btn-secondary">Submit</button>
     </form>
 </div>

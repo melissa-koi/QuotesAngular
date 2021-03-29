@@ -4,13 +4,19 @@
   
     <div class="row">
         <div class="col-md-6">
-            <div *ngFor = 'let quotes of quote'>
-                <p>{{quotes.name}}</p>
+            <div *ngFor = 'let quotes of quote; let i=index'>
+                <div>
+                    <p>{{quotes.quote}}</p>
+                    <button (click) = 'toggleDetails(i)' class="btn btn-success">More Details</button>
+                    <button class="btn btn-primary">Upvote</button>
+                    <button class="btn btn-primary">Downvote</button>
+                </div>
+                
             </div>
             
         </div>
       <div class="col-md-6">
-        <app-quotes-form></app-quotes-form>
+        <app-quotes-form (addNewQuote) = "addNewQuote($event)"></app-quotes-form>
       </div>
     </div>
   </div>
