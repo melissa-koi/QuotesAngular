@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col-md-6">
             <div *ngFor = 'let quotes of quote; let i=index'>
-                <div>
+                <div class="mb-5">
                     <p>"{{quotes.quote}}" - {{quotes.author}}</p>
-                    <button (click) = 'toggleDetails(i)' class="btn btn-success">More Details</button><br>
-                    <button class="btn btn-primary" (click)="upvoteQ(quotes)">Upvote: {{quotes.upvote}}</button>
-                    <button class="btn btn-primary"(click)="downvoteQ(quotes)">Downvote: {{quotes.downvote}}</button>
+                    <button (click) = 'toggleDetails(i)' class="btn btn-secondary mb-2">More Details</button><br>
+                    <button class="btn btn-outline-info mr-1" (click)="upvoteQ(quotes)">Upvote: {{quotes.upvote}}</button>
+                    <button class="btn btn-outline-info mr-2"(click)="downvoteQ(quotes)">Downvote: {{quotes.downvote}}</button>
                     <button class="btn btn-dark" (click) ="reset(quotes)">Reset</button>
                 </div>
                 <div *ngIf = 'quotes.showAuthor'>
