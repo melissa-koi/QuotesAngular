@@ -32,9 +32,16 @@ export class QuotesComponent implements OnInit {
     }
   }
 
-  
-  
-  
+  upvoteQ(quote:Quotes) {
+    quote.upvote+=1;
+  }
+  downvoteQ(quote:Quotes) {
+    quote.downvote+=1;
+  }
+  reset(quote:Quotes) {
+    quote.upvote=0;
+    quote.downvote=0;
+  }
   constructor() { }
 
   ngOnInit(): void {
