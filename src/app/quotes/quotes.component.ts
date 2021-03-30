@@ -10,6 +10,7 @@ export class QuotesComponent implements OnInit {
 
   quote:Quotes[] = [
     new Quotes('quoted', 'named' ,'authored',new Date(2021,3,14)),
+    new Quotes('quoted', 'named' ,'authored',new Date(2021,4,14)),
     new Quotes('quoted', 'named' ,'authored',new Date(2021,4,14))
   ];
 

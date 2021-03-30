@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="text-center">QUOTE FORM</h1>
+    <h2 class="text-center">Add Quote</h2>
     <form (ngSubmit) = 'submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
             <input type="text" placeholder="Quote" name="quote" id="quote" class="form-control" [(ngModel)]="newQuote.quote" #quote='ngModel' required>
@@ -28,7 +28,7 @@
                 <p>Date is required</p>
             </div>
         </div>
-        <button type="submit" class="btn btn-secondary">Submit</button>
+        <button type="submit" class="btn btn-success">Submit</button>
     </form>
 </div>
 
