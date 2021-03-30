@@ -7,9 +7,10 @@
             <div *ngFor = 'let quotes of quote; let i=index'>
                 <div>
                     <p>"{{quotes.quote}}" - {{quotes.author}}</p>
-                    <button (click) = 'toggleDetails(i)' class="btn btn-success">More Details</button>
-                    <button class="btn btn-primary">Upvote</button>
-                    <button class="btn btn-primary">Downvote</button>
+                    <button (click) = 'toggleDetails(i)' class="btn btn-success">More Details</button><br>
+                    <button class="btn btn-primary" (click) ="increaseBtn()">Upvote {{quotes.upvote}}</button>
+                    <button class="btn btn-primary" (click) ="decreaseBtn()">Downvote {{quotes.downvote}}</button>
+                    <button class="btn btn-dark" (click) ="reset()">Reset</button>
                 </div>
                 <div *ngIf = 'quotes.showAuthor'>
                     <app-quote-details [quotes] = 'quotes' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
@@ -18,7 +19,7 @@
             
         </div>
       <div class="col-md-6">
-        <app-quotes-form (addNewQuote) = "addNewQuote($event)"></app-quotes-form>
+        <app-quotes-form (addQuote) = "addNewQuote($event)"></app-quotes-form>
       </div>
     </div>
   </div>

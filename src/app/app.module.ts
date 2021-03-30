@@ -8,6 +8,8 @@ import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { DateCountPipe } from './date-count.pipe';
+import { CounterDirective } from './counter.directive';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { DateCountPipe } from './date-count.pipe';
     QuotesFormComponent,
     QuotesComponent,
     QuoteDetailsComponent,
-    DateCountPipe
+    DateCountPipe,
+    CounterDirective,
+    CounterComponent
   ],
   imports: [
     BrowserModule,

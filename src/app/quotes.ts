@@ -1,4 +1,6 @@
 export class Quotes {
     showAuthor:boolean;
-    constructor(public quote:string, public name:string, public author:string, public completeDate:Date){this.showAuthor=false;}
+    upvote:number;
+    downvote:number
+    constructor(public quote:string, public name:string, public author:string, public completeDate:Date){this.showAuthor=false;this.upvote=0;this.downvote=0}
 }
