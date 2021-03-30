@@ -6,7 +6,7 @@
         <div class="col-md-6">
             <div *ngFor = 'let quotes of quote; let i=index' class="mb-5">
                 <div>
-                    <p>"{{quotes.quote}}" - <span>{{quotes.author}}</span></p>
+                    <p>"{{quotes.quote}}"  - <span>{{quotes.author}}</span></p>
                     <button (click) = 'toggleDetails(i)' class="btn btn-secondary mb-2">More...</button><br>
                     <button class="btn btn-outline-info mr-1" (click)="upvoteQ(quotes)">Upvote: {{quotes.upvote}}</button>
                     <button class="btn btn-outline-info mr-2"(click)="downvoteQ(quotes)">Downvote: {{quotes.downvote}}</button>
