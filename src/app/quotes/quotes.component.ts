@@ -9,9 +9,8 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
 
   quote:Quotes[] = [
-    new Quotes('quoted', 'named' ,'authored',new Date(2021,3,14)),
-    new Quotes('quoted', 'named' ,'authored',new Date(2021,4,14)),
-    new Quotes('quoted', 'named' ,'authored',new Date(2021,4,14))
+    new Quotes('I am Groot', 'Anonymous','Guardians of the Galaxy' ,new Date(2021,3,14)),
+    
   ];
 
   toggleDetails(index) {
