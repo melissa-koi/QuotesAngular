@@ -1,7 +1,7 @@
 # Quotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
-
+### By Melissa Wangui
 ## Decription
 
 This is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational. 
@@ -28,6 +28,6 @@ You will need:
 * Stable internet connection
 * A github account
 * Repository used to host the website
-## [Link]( https://melissa-koi.github.io/pizzaWebsite/) to live webpage
+## [Link]( https://melissa-koi.github.io/QuotesAngular/) to live webpage
 
-## [License](https://github.com/melissa-koi/pizzaWebsite/blob/main/LICENSE)
+## [License](https://github.com/melissa-koi/QuotesAngular/blob/main/LICENSE)
